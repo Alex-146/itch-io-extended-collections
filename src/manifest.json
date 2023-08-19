@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Itch.io extended collections",
+  "description": "",
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "matches": ["https://itch.io/my-collections"],
+      "js": ["./js/my-collections.js"]
+    },
+    {
+      "matches": ["https://itch.io/games/*", "https://*.itch.io/"],
+      "js": ["./js/games.js"]
+    }
+  ],
+  "permissions": ["storage"],
+  "web_accessible_resources": [
+    {
+      "matches": ["<all_urls>"],
+      "resources": ["js/storage.js"]
+    }
+  ]
+}
